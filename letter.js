@@ -1,33 +1,30 @@
-Var Letter = function(ltr) {
-	
-	// stores actual letter
-	
-	this.letter = ltr;
-	
-	//property/boolean if the letter can be shown
+var Letter = function(ltr) {
+  // stores actual letter
 
-	this.appear = false;
+  this.letter = ltr;
 
-	this.letterRender = function() {
+  //property/boolean if the letter can be shown
 
-		//renders a blank as it is
-		
-		if(this.letter === ""){
-			
-			//makes sure that when the function checks if the word is found doesn't read the blank as false
+  this.appear = false;
 
-			this.appear = true;
+  this.letterRender = function() {
+    //renders a blank as it is
 
-			return "";
+    if (this.letter === "") {
+      //makes sure that when the function checks if the word is found doesn't read the blank as false
 
-		}if(this.appear === false){//If it doesn't appear , it returns a "_"
+      this.appear = true;
 
-			return this.letter;
-		}
-	};
+      return "";
+    }
+    if (this.appear === false) {
+      //If it doesn't appear , it returns a "_"
 
+      return this.letter;
+    }
+  };
 };
 
 //export to use in word.js
 
-module.exprts = Letter;
+module.exports = Letter;
